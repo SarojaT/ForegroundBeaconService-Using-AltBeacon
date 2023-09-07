@@ -50,7 +50,6 @@ public class BeaconService extends Service implements BootstrapNotifier, Interna
         mBeaconManager.setBackgroundScanPeriod(1100);
         mBeaconManager.setRegionStatePersistenceEnabled(false);
         mBeaconManager.bindInternal(this);
-
     }
 
     @Override
@@ -59,9 +58,6 @@ public class BeaconService extends Service implements BootstrapNotifier, Interna
         if (regionBootstrap != null) {
             regionBootstrap.disable();
         }
-       /* if (mBeaconManager.foregroundServiceStartFailed()) {
-            mBeaconManager.retryForegroundServiceScanning();
-        }*/
     }
 
     @Nullable
